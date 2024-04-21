@@ -1,0 +1,35 @@
+<head>
+    <script>
+
+        // Função para encontrar o nome da pessoa mais nova
+        function encontrarPessoaMaisNova() {
+            let pessoaMaisNova = {
+                nome: "",
+                idade: Infinity
+            };
+
+            for (let i = 1; i <= 10; i++) {
+                const nome = prompt(`Digite o nome da pessoa ${i}:`);
+                const idade = parseInt(prompt(`Digite a idade da pessoa ${i}:`));
+
+                // Verifica se o valor informado é válido
+                if (isNaN(idade)) {
+                   alert("Por favor, digite uma idade válida.");
+                    return; // Encerra a função se o valor não for válido
+                }
+
+                // Verifica se a pessoa atual é mais nova do que a pessoa mais nova encontrada até agora
+                if (idade < pessoaMaisNova.idade) {
+                    pessoaMaisNova.nome = nome;
+                    pessoaMaisNova.idade = idade;
+                }
+            }
+
+            alert(`A pessoa mais nova é ${pessoaMaisNova.nome} com ${pessoaMaisNova.idade} anos.`);
+        }
+
+        // Executar função para encontrar a pessoa mais nova e exibir o resultado
+        encontrarPessoaMaisNova();
+
+    </script>
+</head>

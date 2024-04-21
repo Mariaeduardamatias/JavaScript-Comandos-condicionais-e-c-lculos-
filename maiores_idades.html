@@ -1,0 +1,25 @@
+<head>
+    <script>
+
+        // Função para contar quantas pessoas são maiores de idade
+        function contarMaioresIdade() {
+            let contador = 0;
+            for (let i = 1; i <= 20; i++) {
+                const idade = parseInt(prompt(`Digite a idade da pessoa ${i}:`));
+                // Verifica se o valor informado é válido
+                if (isNaN(idade)) {
+                   alert("Por favor, digite uma idade válida.");
+                    return; // Encerra a função se o valor não for válido
+                }
+                if (idade >= 18) {
+                    contador++;
+                }
+            }
+            alert("Das 20 pessoas, " + contador + " são maiores de idade.");
+        }
+
+        // Executar função para contar quantas pessoas são maiores de idade e exibir o resultado
+        contarMaioresIdade();
+
+    </script>
+</head>

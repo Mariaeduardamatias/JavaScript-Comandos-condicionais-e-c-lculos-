@@ -1,0 +1,30 @@
+
+<head>
+    <script>
+
+        // Função para calcular a quantidade de salários mínimos
+        function calcularSalariosMinimos(salarioUsuario, salarioMinimo) {
+            const quantidadeSalariosMinimos = salarioUsuario / salarioMinimo;
+            return quantidadeSalariosMinimos.toFixed(2); // Arredonda o resultado para duas casas decimais
+        }
+
+        // Função principal
+        function main() {
+            const salarioMinimo = 1212.00; // Valor do salário mínimo
+            const salarioUsuario = parseFloat(prompt("Digite o salário do usuário:"));
+
+            // Verifica se o valor informado é válido
+            if (isNaN(salarioUsuario)) {
+               alert("Por favor, digite um valor numérico válido.");
+            } else {
+                // Calcula a quantidade de salários mínimos
+                const quantidadeSalariosMinimos = calcularSalariosMinimos(salarioUsuario, salarioMinimo);
+                alert(`O usuário ganha ${quantidadeSalariosMinimos} salários mínimos.`);
+            }
+        }
+
+        // Executa o programa
+        main();
+
+    </script>
+</head>

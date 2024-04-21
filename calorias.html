@@ -1,0 +1,49 @@
+<head>
+    <script>
+
+        // Tabela de calorias por opção
+        const caloriasPorOpcao = {
+            pratos: [0, 180, 230, 250, 350], // Índice 0 reservado para opção inválida
+            sobremesas: [0, 75, 110, 170, 200], 
+            bebidas: [0, 20, 70, 100, 65]
+        };
+
+        // Função para calcular total de calorias
+        function calcularCalorias(prato, sobremesa, bebida) {
+            const caloriasPrato = caloriasPorOpcao.pratos[prato];
+            const caloriasSobremesa = caloriasPorOpcao.sobremesas[sobremesa];
+            const caloriasBebida = caloriasPorOpcao.bebidas[bebida];
+
+            // Verifica se as opções são válidas
+            if (caloriasPrato === 0 || caloriasSobremesa === 0 || caloriasBebida === 0) {
+                return "Opção inválida selecionada. Por favor, selecione opções válidas.";
+            }
+
+            const totalCalorias = caloriasPrato + caloriasSobremesa + caloriasBebida;
+            return totalCalorias;
+        }
+
+        function obterEntradaUsuario() {
+            const prato = parseInt(prompt("Digite o número correspondente ao prato (1 - vegetariano, 2 - Peixe, 3 - Frango, 4 - Carne):"));
+            const sobremesa = parseInt(prompt("Digite o número correspondente à sobremesa (1 - Abacaxi, 2 - Sorvete diet, 3 - Mousse diet, 4 - Mousse chocolate):"));
+            const bebida = parseInt(prompt("Digite o número correspondente à bebida (1 - Chá, 2 - Suco de laranja, 3 - Suco de melão, 4 - Refrigerante diet):"));
+
+            return { prato, sobremesa, bebida };
+        }
+
+        // Função principal
+        function main() {
+            const { prato, sobremesa, bebida } = obterEntradaUsuario();
+            const totalCalorias = calcularCalorias(prato, sobremesa, bebida);
+
+            if (typeof totalCalorias === "number") {
+                alert(`A quantidade total de calorias da refeição é: ${totalCalorias}`);
+            } else {
+                alert(totalCalorias);
+            }
+        }
+
+        main();
+
+    </script>
+</head>

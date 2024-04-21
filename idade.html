@@ -1,0 +1,25 @@
+<head>
+    <script>
+
+         // Função para ler as idades das pessoas e calcular a soma
+        function calcularSomaIdades() {
+            let soma = 0;
+            for (let i = 1; i <= 20; i++) {
+                const idade = parseInt(prompt(`Digite a idade da pessoa ${i}:`));
+                // Verifica se o valor informado é válido
+                if (isNaN(idade)) {
+                   alert("Por favor, digite uma idade válida.");
+                    return; // Encerra a função se o valor não for válido
+                }
+                soma += idade;
+            }
+         alert("A soma das idades das 20 pessoas é:" + soma);
+        }
+
+        // Executar função para calcular a soma das idades e exibir o resultado
+        calcularSomaIdades();
+
+
+
+   </script>
+</head>

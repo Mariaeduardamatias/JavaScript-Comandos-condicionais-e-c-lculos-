@@ -1,0 +1,35 @@
+<head>
+    <script>
+        
+        // Função para calcular o valor total a ser pago
+        function calcularTotal(valor1, quantidade1, valor2, quantidade2, ipi) {
+            const total = (valor1 * quantidade1 + valor2 * quantidade2) * (ipi / 100 + 1);
+            return total.toFixed(2); // Arredondando o resultado para duas casas decimais
+        }
+
+        // Função principal
+        function main() {
+            // Entrada do usuário
+            const ipi = parseFloat(prompt("Digite a porcentagem do IPI a ser acrescido:"));
+            const codigo1 = parseInt(prompt("Digite o código da peça 1:"));
+            const valor1 = parseFloat(prompt("Digite o valor unitário da peça 1:"));
+            const quantidade1 = parseInt(prompt("Digite a quantidade de peças 1:"));
+            const codigo2 = parseInt(prompt("Digite o código da peça 2:"));
+            const valor2 = parseFloat(prompt("Digite o valor unitário da peça 2:"));
+            const quantidade2 = parseInt(prompt("Digite a quantidade de peças 2:"));
+
+            // Verifica se os valores informados são válidos
+            if (isNaN(ipi) || isNaN(codigo1) || isNaN(valor1) || isNaN(quantidade1) || isNaN(codigo2) || isNaN(valor2) || isNaN(quantidade2)) {
+               alert("Por favor, digite valores numéricos válidos.");
+            } else {
+                // Calcula o valor total a ser pago
+                const totalPago = calcularTotal(valor1, quantidade1, valor2, quantidade2, ipi);
+               alert(`O valor total a ser pago é R$ ${totalPago}`);
+            }
+        }
+
+        // Executa o programa
+        main();
+
+    </script>
+</head>

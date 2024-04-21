@@ -1,0 +1,31 @@
+<head>
+    <script>
+
+        // Função para calcular a média de um conjunto de números
+        function calcularMedia(numeros) {
+            const soma = numeros.reduce((total, numero) => total + numero, 0);
+            return soma / numeros.length;
+        }
+
+        // Conjunto de números
+        const numeros1 = [8, 9, 7];
+        const numeros2 = [4, 5, 6];
+
+        // Calculando as médias dos conjuntos de números
+        const media1 = calcularMedia(numeros1);
+        const media2 = calcularMedia(numeros2);
+
+        // Calculando a soma das duas médias
+        const somaDasMedias = media1 + media2;
+
+        // Calculando a média das médias
+        const mediaDasMedias = (media1 + media2) / 2;
+
+        // Imprimindo os resultados
+        alert("Média do conjunto 1:", media1);
+        alert("Média do conjunto 2:", media2);
+        alert("Soma das médias:", somaDasMedias);
+        alert("Média das médias:", mediaDasMedias);
+
+    </script>
+</head>

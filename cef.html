@@ -1,0 +1,41 @@
+<head>
+    <script>
+
+        // Função para calcular o valor do crédito com base no saldo médio
+        function calcularCredito(saldoMedio) {
+            let valorCredito = 0;
+
+            if (saldoMedio <= 200) {
+                valorCredito = saldoMedio * 0.1;
+            } else if (saldoMedio <= 300) {
+                valorCredito = saldoMedio * 0.2;
+            } else if (saldoMedio <= 400) {
+                valorCredito = saldoMedio * 0.3;
+            } else {
+                valorCredito = saldoMedio * 0.4;
+            }
+
+            // Aplica juros de 2%
+            valorCredito *= 1.02;
+
+            return valorCredito;
+        }
+
+        // Função principal
+        function main() {
+            const saldoMedio = parseFloat(prompt("Digite o saldo médio do cliente:"));
+
+            if (isNaN(saldoMedio)) {
+                alert("Por favor, digite um valor numérico válido para o saldo médio.");
+            } else {
+                const valorCredito = calcularCredito(saldoMedio);
+                alert(`Saldo médio do cliente: R$ ${saldoMedio.toFixed(2)}`);
+               alert(`Valor do crédito: R$ ${valorCredito.toFixed(2)}`);
+            }
+        }
+
+        // Executar programa
+        main();
+
+    </script>
+</head>

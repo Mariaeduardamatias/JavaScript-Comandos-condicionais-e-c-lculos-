@@ -1,0 +1,25 @@
+<head>
+    <script>
+
+        // Função para contar quantos números estão entre 0 e 100
+        function contarNumerosEntreZeroCem() {
+            let contador = 0;
+            for (let i = 1; i <= 20; i++) {
+                const numero = parseFloat(prompt(`Digite o número ${i}:`));
+                // Verifica se o valor informado é válido
+                if (isNaN(numero)) {
+                   alert("Por favor, digite um número válido.");
+                    return; // Encerra a função se o valor não for válido
+                }
+                if (numero >= 0 && numero <= 100) {
+                    contador++;
+                }
+            }
+           alert(`Dos 20 números, ${contador} estão entre 0 e 100.`);
+        }
+
+        // Executar função para contar quantos números estão entre 0 e 100 e exibir o resultado
+        contarNumerosEntreZeroCem();
+
+    </script>
+</head>

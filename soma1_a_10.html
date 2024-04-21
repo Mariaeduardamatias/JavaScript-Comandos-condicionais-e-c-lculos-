@@ -1,0 +1,32 @@
+<head>
+    <script>
+
+        // Função para ler 10 números do usuário e calcular a soma
+        function calcularSoma() {
+            let soma = 0;
+            for (let i = 0; i < 10; i++) {
+                const numero = parseFloat(prompt(`Digite o número ${i + 1}:`));
+                // Verifica se o valor informado é válido
+                if (isNaN(numero)) {
+                    alert("Por favor, digite um número válido.");
+                    return; // Encerra a função se o valor não for válido
+                }
+                soma += numero;
+            }
+            return soma;
+        }
+
+        // Função principal
+        function main() {
+            const soma = calcularSoma();
+            if (soma !== undefined) {
+                alert("A soma dos 10 números é: " + soma);
+            }
+        }
+
+        // Executar programa
+        main();
+
+
+    </script>
+</head>

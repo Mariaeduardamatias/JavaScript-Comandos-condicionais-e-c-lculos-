@@ -1,0 +1,24 @@
+<head>
+    <script>
+
+        // Função para ler as idades das pessoas e calcular a média
+        function calcularMediaIdades() {
+            let soma = 0;
+            for (let i = 1; i <= 20; i++) {
+                const idade = parseInt(prompt(`Digite a idade da pessoa ${i}:`));
+                // Verifica se o valor informado é válido
+                if (isNaN(idade)) {
+                    alert("Por favor, digite uma idade válida.");
+                    return; // Encerra a função se o valor não for válido
+                }
+                soma += idade;
+            }
+            const media = soma / 20;
+            alert("A média das idades das 20 pessoas é:"+ media);
+        }
+
+        // Executar função para calcular a média das idades e exibir o resultado
+        calcularMediaIdades();
+
+    </script>
+</head>

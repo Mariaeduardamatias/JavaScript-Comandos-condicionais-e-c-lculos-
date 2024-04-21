@@ -1,0 +1,28 @@
+<head>
+    <script>
+
+        // Função para calcular o saldo com reajuste de 1.5%
+        function calcularSaldoReajustado(saldo) {
+            const saldoReajustado = saldo * 1.015; // Multiplica o saldo por 1.015 para aplicar o reajuste de 1.5%
+            return saldoReajustado.toFixed(2); // Arredonda o resultado para duas casas decimais
+        }
+
+        // Função principal
+        function main() {
+            const saldo = parseFloat(prompt("Digite o saldo:"));
+
+            // Verifica se o valor informado é válido
+            if (isNaN(saldo)) {
+              alert("Por favor, digite um valor numérico válido.");
+            } else {
+                // Calcula o saldo com reajuste
+                const saldoReajustado = calcularSaldoReajustado(saldo);
+                alert(`O saldo com reajuste de 1.5% é: R$ ${saldoReajustado}`);
+            }
+        }
+
+       // Executa o programa
+         main();
+
+    </script>
+</head>

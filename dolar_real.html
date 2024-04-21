@@ -1,0 +1,29 @@
+<head>
+    <script>
+
+        // Função para calcular o valor em real (R$) a partir de um valor em dólar (US$)
+        function converterDolarParaReal(cotacaoDolar, quantidadeDolar) {
+            const valorReal = cotacaoDolar * quantidadeDolar;
+            return valorReal.toFixed(2); // Arredonda o resultado para duas casas decimais
+        }
+
+        // Função principal
+        function main() {
+            const cotacaoDolar = parseFloat(prompt("Digite a cotação do dólar (em real):"));
+            const quantidadeDolar = parseFloat(prompt("Digite a quantidade de dólares disponíveis:"));
+
+            // Verifica se os valores informados são válidos
+            if (isNaN(cotacaoDolar) || isNaN(quantidadeDolar)) {
+               alert("Por favor, digite valores numéricos válidos.");
+            } else {
+                // Calcula o valor em real
+                const valorReal = converterDolarParaReal(cotacaoDolar, quantidadeDolar);
+               alert(`O valor em real (R$) é: R$ ${valorReal}`);
+            }
+        }
+
+        // Executar programa
+        main();
+
+    </script>
+</head>

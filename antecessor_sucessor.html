@@ -1,0 +1,28 @@
+<head>
+    <script>
+
+        // Função para imprimir antecessor e sucessor de um número inteiro
+        function imprimirAntecessorESucessor(numero) {
+            const antecessor = numero - 1;
+            const sucessor = numero + 1;
+
+            alert(`Antecessor de ${numero}: ${antecessor}`);
+            alert(`Sucessor de ${numero}: ${sucessor}`);
+        }
+
+        // Função principal
+        function main() {
+            const numero = parseInt(prompt("Digite um número inteiro:"));
+
+            if (isNaN(numero)) {
+               alert("Por favor, digite um número inteiro válido.");
+            } else {
+                imprimirAntecessorESucessor(numero);
+            }
+        }
+
+        // Executar programa
+        main();
+
+    </script>
+</head>

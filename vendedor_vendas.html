@@ -1,0 +1,34 @@
+<head>
+    <script>
+
+        // Função para calcular o salário final do vendedor
+        function calcularSalarioFinal(salarioFixo, totalVendas) {
+            const comissao = totalVendas * 0.15; // Calcula a comissão como 15% do total de vendas
+            const salarioFinal = salarioFixo + comissao; // Adiciona a comissão ao salário fixo
+            return salarioFinal.toFixed(2); // Arredonda o resultado para duas casas decimais
+        }
+
+        // Função principal
+        function main() {
+            const nomeVendedor = prompt("Digite o nome do vendedor:");
+            const salarioFixo = parseFloat(prompt("Digite o salário fixo do vendedor:"));
+            const totalVendas = parseFloat(prompt("Digite o total de vendas efetuadas pelo vendedor no mês:"));
+
+            // Verifica se os valores informados são válidos
+            if (isNaN(salarioFixo) || isNaN(totalVendas)) {
+               alert("Por favor, digite valores numéricos válidos.");
+            } else {
+
+                // Calcula o salário final do vendedor
+                const salarioFinal = calcularSalarioFinal(salarioFixo, totalVendas);
+                alert(`Nome do vendedor: ${nomeVendedor}`);
+                alert(`Salário fixo: R$ ${salarioFixo}`);
+                alert(`Salário final no final do mês: R$ ${salarioFinal}`);
+            }
+        }
+
+        // Executa o programa
+        main();
+
+    </script>
+</head>

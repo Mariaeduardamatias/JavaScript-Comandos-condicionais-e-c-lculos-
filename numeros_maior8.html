@@ -1,0 +1,25 @@
+<head>
+    <script>
+
+        // Função para contar quantos números são maiores do que 8
+        function contarMaioresQueOito() {
+            let contador = 0;
+            for (let i = 1; i <= 20; i++) {
+                const numero = parseFloat(prompt(`Digite o número ${i}:`));
+                // Verifica se o valor informado é válido
+                if (isNaN(numero)) {
+                  alert("Por favor, digite um número válido.");
+                    return; // Encerra a função se o valor não for válido
+                }
+                if (numero > 8) {
+                    contador++;
+                }
+            }
+           alert(`Dos 20 números, ${contador} são maiores do que 8.`);
+        }
+
+        // Executar função para contar quantos números são maiores do que 8 e exibir o resultado
+        contarMaioresQueOito();
+
+    </script>
+</head>

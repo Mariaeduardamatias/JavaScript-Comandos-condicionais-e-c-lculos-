@@ -1,0 +1,28 @@
+<head>
+    <script>
+
+        // Função para calcular o valor das prestações
+        function calcularPrestacoes(valorCompra) {
+            const valorPrestacao = valorCompra / 5;
+            return valorPrestacao.toFixed(2); // Arredonda o resultado para duas casas decimais
+        }
+
+        // Função principal
+        function main() {
+            const valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+
+            // Verifica se o valor informado é válido
+            if (isNaN(valorCompra)) {
+               alert("Por favor, digite um valor numérico válido.");
+            } else {
+                // Calcula o valor das prestações
+                const valorPrestacao = calcularPrestacoes(valorCompra);
+               alert(`O valor de cada prestação é: R$ ${valorPrestacao}`);
+            }
+        }
+
+        // Executar programa
+        main();
+
+    </script>
+</head>

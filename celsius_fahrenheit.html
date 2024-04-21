@@ -1,0 +1,28 @@
+<head>
+    <script>
+
+        // Função para converter temperatura de Celsius para Fahrenheit
+        function converterParaFahrenheit(celsius) {
+            const fahrenheit = (9 * celsius + 160) / 5;
+            return fahrenheit;
+        }
+
+        // Função principal
+        function main() {
+            const temperaturaCelsius = parseFloat(prompt("Digite a temperatura em graus Celsius:"));
+
+            // Verifica se o valor informado é válido
+            if (isNaN(temperaturaCelsius)) {
+                alert("Por favor, digite um valor numérico válido.");
+            } else {
+                // Converte a temperatura para Fahrenheit
+                const temperaturaFahrenheit = converterParaFahrenheit(temperaturaCelsius);
+                alert(`A temperatura em Fahrenheit é: ${temperaturaFahrenheit.toFixed(2)} °F`);
+            }
+        }
+
+        // Executa o programa
+        main();
+
+    </script>
+</head>

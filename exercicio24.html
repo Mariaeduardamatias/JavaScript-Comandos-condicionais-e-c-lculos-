@@ -1,0 +1,34 @@
+<head>
+    <script>
+
+        // Função para ler uma sequência de números e calcular a soma
+        function calcularSoma() {
+            let soma = 0;
+            while (true) {
+                const numero = parseFloat(prompt("Digite um número (ou um número negativo para encerrar):"));
+                // Verifica se o número é negativo para encerrar a execução
+                if (numero < 0) {
+                    break;
+                }
+                // Verifica se o valor informado é válido
+                if (isNaN(numero)) {
+                    alert("Por favor, digite um número válido.");
+                    continue; // Pula para a próxima iteração do loop
+                }
+                soma += numero;
+            }
+            return soma;
+        }
+
+        // Função principal
+        function main() {
+            const soma = calcularSoma();
+            alert("A soma dos números digitados é: " + soma);
+        }
+
+        // Executar programa
+        main();
+
+
+    </script>
+</head>
